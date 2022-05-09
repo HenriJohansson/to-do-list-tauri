@@ -41,12 +41,14 @@ jobs:
       - name: Cargo test
         uses: actions-rs/cargo@v1
         with:
+          path: src-tauri
           command: test
 
       # build a release build of our application to be used during our WebdriverIO tests
       - name: Cargo build
         uses: actions-rs/cargo@v1
         with:
+          path: src-tauri
           command: build
           args: --release
 
